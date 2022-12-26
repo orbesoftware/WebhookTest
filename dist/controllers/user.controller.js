@@ -38,6 +38,8 @@ class UserController {
     postUsuario(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { body } = req;
+            body.Rol_Name = body.Rol_Name.toLowerCase();
+            body.email = body.email.toLowerCase();
             try {
                 body.password = new password_helper_1.default().hash(body.password);
                 const user = new user_model_1.default(body);

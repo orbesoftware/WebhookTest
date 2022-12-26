@@ -15,7 +15,14 @@ const User = db.define('user', {
     name: {type: DataTypes.STRING},
     lastname: {type: DataTypes.STRING},
     password: {type: DataTypes.STRING},
-    avatar: {type: DataTypes.STRING}
+    avatar: {type: DataTypes.STRING},
+    Rol_Name: {
+        type: DataTypes.STRING,
+        references: {
+            model: 'rols',
+            key: 'name'
+        }
+    }
     
 },
 {

@@ -17,6 +17,7 @@ class RolsController {
     newRol(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { body } = req;
+            body.name = body.name.toLowerCase();
             try {
                 const role = new rols_model_1.default(body);
                 yield role.save();

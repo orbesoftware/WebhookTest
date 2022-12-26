@@ -29,7 +29,9 @@ class UserController{
     public async postUsuario(req:Request, res:Response) {
         
         const { body } = req;
-
+        body.Rol_Name = body.Rol_Name.toLowerCase();
+        body.email = body.email.toLowerCase();
+        
         try {
             body.password = new PasswordHelper().hash(body.password);
 

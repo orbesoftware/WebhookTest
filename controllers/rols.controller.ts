@@ -5,6 +5,7 @@ class RolsController{
 
     public async newRol(req: Request, res: Response){
         const {body} = req;
+        body.name = body.name.toLowerCase();
         
         try {
             

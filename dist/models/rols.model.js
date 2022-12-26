@@ -19,12 +19,12 @@ const Rols = db_1.default.define('rols', {
     timestamps: false
 });
 Rols.hasMany(user_model_1.default, {
-    foreignKey: 'Rol_Id',
-    sourceKey: 'id'
+    foreignKey: 'Rol_Name',
+    sourceKey: 'name'
 });
 user_model_1.default.belongsTo(Rols, {
-    foreignKey: 'Rol_Id',
-    targetKey: 'id',
+    foreignKey: 'Rol_Name',
+    targetKey: 'name',
 });
 exports.default = Rols;
 //# sourceMappingURL=rols.model.js.map

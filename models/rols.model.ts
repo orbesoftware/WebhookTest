@@ -23,13 +23,13 @@ const Rols = db.define('rols',
 );
 
 Rols.hasMany(User,{
-    foreignKey: 'Rol_Id',
-    sourceKey: 'id'
+    foreignKey: 'Rol_Name',
+    sourceKey: 'name'
 });
 
 User.belongsTo(Rols,{
-    foreignKey: 'Rol_Id',
-    targetKey: 'id',
+    foreignKey: 'Rol_Name',
+    targetKey: 'name',
 })
 
 
