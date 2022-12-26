@@ -44,7 +44,7 @@ class UserController {
                 yield user.save();
                 res.json({
                     msg: 'El usuario se creo con exito',
-                    body
+                    user: body
                 });
             }
             catch (error) {

@@ -4,12 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
-const adminClass_1 = __importDefault(require("./classes/adminClass"));
 const server_1 = __importDefault(require("./models/server"));
 dotenv_1.default.config();
 require('./models/associations');
 const server = new server_1.default();
 server.listen();
-const admin = new adminClass_1.default('Chicala', 'Alejandro', "ale@ale.com", "123");
-admin.save();
 //# sourceMappingURL=app.js.map

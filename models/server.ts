@@ -3,6 +3,7 @@ import db from '../db/db';
 import cors from "cors";
 import userRoutes from "../routes/user.routes"
 import authRoutes from "../routes/auth.routes"
+import rolsRoutes from "../routes/rols.routes"
 class Server {
 
     private app: Application;
@@ -10,6 +11,7 @@ class Server {
     private apiPaths = {
         users: '/api/users',
         auth: '/api/auth',
+        rols: '/api/rols'
     }
 
     constructor(){
@@ -57,7 +59,7 @@ class Server {
     routes() {
         this.app.use(this.apiPaths.users, userRoutes);
         this.app.use(this.apiPaths.auth, authRoutes);
-
+        this.app.use(this.apiPaths.rols, rolsRoutes);
         }
 
 }

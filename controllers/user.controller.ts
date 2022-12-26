@@ -35,10 +35,9 @@ class UserController{
 
             const user = new User(body);
             await user.save()
-
             res.json({
                 msg: 'El usuario se creo con exito',
-                body
+                user: body
             })
 
         } catch (error) {
