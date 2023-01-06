@@ -26,7 +26,7 @@ class UserController{
         
     }
 
-    public async postUsuario(req:Request, res:Response) {
+    public async register(req:Request, res:Response) {
         
         const { body } = req;
         body.Rol_Name = body.Rol_Name.toLowerCase();

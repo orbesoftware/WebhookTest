@@ -35,7 +35,7 @@ class UserController {
             }
         });
     }
-    postUsuario(req, res) {
+    register(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { body } = req;
             body.Rol_Name = body.Rol_Name.toLowerCase();

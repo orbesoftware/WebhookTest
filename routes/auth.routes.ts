@@ -7,11 +7,15 @@ const router = Router();
 
 const controller: AuthController = new AuthController()
 
-router.post('/', controller.login,
+router.post('/login', controller.login,
 [
     check('email', "Introduce un email").notEmpty(),
     check('password', "Introduce una contraseña").notEmpty(),
     noErrors
 ], controller.login)
+
+router.post('/jwt', controller.jwtValidate);
+router.post('/jwt/:role', controller.isRole)
+
 
 export default router

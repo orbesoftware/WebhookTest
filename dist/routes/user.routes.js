@@ -20,7 +20,7 @@ router.post('/', [
     (0, express_validator_1.check)('lastname', 'El apellido es obligatorio').notEmpty(),
     (0, express_validator_1.check)('password', 'La contraseña es obligatoria').notEmpty(),
     noErrors_middleware_1.default
-], controller.postUsuario);
+], controller.register);
 router.put('/:id', controller.putUsuario);
 exports.default = router;
 //# sourceMappingURL=user.routes.js.map

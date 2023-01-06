@@ -22,7 +22,7 @@ router.post('/',
     check('password', 'La contraseña es obligatoria').notEmpty(),
     noErrors
 ],
- controller.postUsuario)
+ controller.register)
 
  router.put('/:id', controller.putUsuario)
 

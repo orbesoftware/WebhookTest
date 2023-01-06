@@ -9,10 +9,12 @@ const auth_controller_1 = __importDefault(require("../controllers/auth.controlle
 const noErrors_middleware_1 = __importDefault(require("../middlewares/noErrors.middleware"));
 const router = (0, express_1.Router)();
 const controller = new auth_controller_1.default();
-router.post('/', controller.login, [
+router.post('/login', controller.login, [
     (0, express_validator_1.check)('email', "Introduce un email").notEmpty(),
     (0, express_validator_1.check)('password', "Introduce una contraseña").notEmpty(),
     noErrors_middleware_1.default
 ], controller.login);
+router.post('/jwt', controller.jwtValidate);
+router.post('/jwt/:role', controller.isRole);
 exports.default = router;
 //# sourceMappingURL=auth.routes.js.map
