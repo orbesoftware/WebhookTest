@@ -15,6 +15,7 @@ const User = db_1.default.define('user', {
     email: { type: sequelize_1.DataTypes.STRING },
     name: { type: sequelize_1.DataTypes.STRING },
     lastname: { type: sequelize_1.DataTypes.STRING },
+    fullname: { type: sequelize_1.DataTypes.STRING },
     password: { type: sequelize_1.DataTypes.STRING },
     avatar: { type: sequelize_1.DataTypes.STRING },
     Rol_Name: {

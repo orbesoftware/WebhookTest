@@ -38,8 +38,11 @@ class UserController {
     register(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { body } = req;
-            body.Rol_Name = body.Rol_Name.toLowerCase();
-            body.email = body.email.toLowerCase();
+            body.Rol_Name = body.Rol_Name.trim().toLowerCase();
+            body.email = body.email.trim().toLowerCase();
+            body.name = body.name.trim().toLowerCase();
+            body.lastname = body.lastname.trim().toLowerCase();
+            body.fullname = body.name + ' ' + body.lastname;
             try {
                 body.password = new password_helper_1.default().hash(body.password);
                 const user = new user_model_1.default(body);
